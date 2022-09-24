@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisScos", "GisScos\GisScos.csproj", "{F0185C13-F0A2-47C4-9DD8-D8ACB831D5DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GisScos.BLL", "GisScos.BLL\GisScos.BLL.csproj", "{94F568B3-7E42-48E4-A47F-52EE9FA560D3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{35F53E33-D7CB-4C54-8237-054A42791FF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0185C13-F0A2-47C4-9DD8-D8ACB831D5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0185C13-F0A2-47C4-9DD8-D8ACB831D5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0185C13-F0A2-47C4-9DD8-D8ACB831D5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0185C13-F0A2-47C4-9DD8-D8ACB831D5DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F568B3-7E42-48E4-A47F-52EE9FA560D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F568B3-7E42-48E4-A47F-52EE9FA560D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F568B3-7E42-48E4-A47F-52EE9FA560D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F568B3-7E42-48E4-A47F-52EE9FA560D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F53E33-D7CB-4C54-8237-054A42791FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F53E33-D7CB-4C54-8237-054A42791FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F53E33-D7CB-4C54-8237-054A42791FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F53E33-D7CB-4C54-8237-054A42791FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F306854B-4DE5-4C2A-9D6B-AFD16A30F64E}
+	EndGlobalSection
+EndGlobal

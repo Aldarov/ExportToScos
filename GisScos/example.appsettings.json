@@ -1,0 +1,80 @@
+{
+  "ConnectionStrings": {
+    "MainConnection": "server=<database>;database=GisScos;multipleactiveresultsets=true;user id=<user>;password=<password>",
+    "HangfireConnection": "server=<database>;database=GisScos;multipleactiveresultsets=true;user id=<user>;password=<password>"
+  },
+  "Host": "<url>", //тестовый сервер
+  "BaseUrl": "vam/api/v2/", //базовый url сервера Гис СЦОС
+  "AccessKeyToScos": "<key>", //ключ доступа для отправки данных в Гис СЦОС
+  "EnableExport": true,
+  "Users": [
+    {
+      "User": "<user>",
+      "Password": "<pwd>",
+      "Role": "admin"
+    },
+    {
+      "User": "<user>",
+      "Password": "<pwd>",
+      "Role": "user"
+    }
+  ],
+  "NLog": {
+    "autoReload": true,
+    "throwConfigExceptions": true,
+    "targets": {
+      "database": {
+        "type": "Database",
+        "dbProvider": "System.Data.SqlClient",
+        "connectionString": "Data Source=<database>;Initial Catalog=GisScos;Trusted_Connection=False;User Id=<user>;Password=<password>;",
+        "keepConnection": "true",
+        "commandText": "insert into dbo.logs(timestamp, level_name, message, logger, callsite, properties, exception) values(@Timestamp, @Level, @Message, @Logger, @Callsite, @Properties, @Exception);",
+        "parameters": [
+          {
+            "name": "@Timestamp",
+            "layout": "${date:format=o}",
+            "dbType": "DbType.DateTime"
+          },
+          {
+            "name": "@Level",
+            "layout": "${level}"
+          },
+          {
+            "name": "@Message",
+            "layout": "${message}"
+          },
+          {
+            "name": "@Logger",
+            "layout": "${logger}"
+          },
+          {
+            "name": "@Callsite",
+            "layout": "${callsite}"
+          },
+          {
+            "name": "@Properties",
+            "layout": "${all-event-properties:separator=|}"
+          },
+          {
+            "name": "@Exception",
+            "layout": "${exception:tostring}"
+          }
+        ]
+      }
+    },
+    "rules": [
+      {
+        "logger": "*",
+        "minLevel": "Error",
+        "writeTo": "database"
+      }
+    ]
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

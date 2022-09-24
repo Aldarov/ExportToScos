@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CurlThin" Version="0.0.7" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Services\CurlHTTPClientService\Curl\curl-ca-bundle.crt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>curl-ca-bundle.crt</TargetPath>
+    </None>
+    <None Update="Services\CurlHTTPClientService\Curl\libcrypto-1_1-x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>libcrypto-1_1-x64.dll</TargetPath>
+    </None>
+    <None Update="Services\CurlHTTPClientService\Curl\libcurl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>libcurl.dll</TargetPath>
+    </None>
+    <None Update="Services\CurlHTTPClientService\Curl\libssl-1_1-x64.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>libssl-1_1-x64.dll</TargetPath>
+    </None>
+    <None Update="Services\CurlHTTPClientService\ContinentTLSClientRoot.pem">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  	  <TargetPath>ContinentTLSClientRoot.pem</TargetPath>
+    </None>
+  </ItemGroup>
+</Project>
